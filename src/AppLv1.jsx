@@ -5,7 +5,7 @@ import './assets/style.css';
 const API_BASE = import.meta.env.VITE_API_BASE;
 const API_PATH = import.meta.env.VITE_API_PATH;
 
-function App() {
+function AppLv1() {
   const [ formData, setFormData ] = useState({
     username: '',
     password: ''
@@ -206,14 +206,14 @@ function App() {
                       <div className="d-flex flex-wrap">
                         {/* ?. -> 可選鏈 -> 存在而且不是 null/undefined，才去呼叫 .map()，否則回傳 undefined */}
                         {/* 大概同 tempProduct.imagesUrl ? tempProduct.imagesUrl.map : null  */}
-                        { tempProduct.imagesUrl ?.map((url, index) => {
+                        { tempProduct.imagesUrl ?.map((url, index) => (
                           <img
                             key={ index }
                             src={ url }
                             className="images"
                             alt="副圖" 
                           />
-                        }) }
+                        )) }
                       </div>
                     </div>
                 </div>
@@ -228,4 +228,4 @@ function App() {
   )
 }
 
-export default App
+export default AppLv1
