@@ -195,7 +195,7 @@ function AppLv3 () {
                 <div className="card mb-3">
                   <img 
                     src={ tempProduct.imageUrl }
-                    className="card-img-top object-fit-contain w-100" 
+                    className="card-img-top object-fit-contain w-100 mt-3" 
                     style={{height: "300px"}}
                     alt="主圖" />
                   <div className="card-body">
