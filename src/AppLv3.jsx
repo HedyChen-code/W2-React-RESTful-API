@@ -52,7 +52,7 @@ function AppLv3 () {
   const getData = async () => {
     try {
       const response = await axios.get(`${API_BASE}/api/${API_PATH}/admin/products`)
-    setProducts(response.data.products);
+      setProducts(response.data.products);
     } catch (error) {
       console.error(error?.response?.data?.message);
     }
@@ -212,15 +212,15 @@ function AppLv3 () {
                       { tempProduct.price } 元
                     </p>
                     <h5 className="h6">更多圖片：</h5>
-                    <div className="d-flex flex-wrap gap-2">
-                      { tempProduct.imagesUrl ?.map((url, index) => {
+                    <div className="d-flex flex-wrap gap-2 justify-content-center">
+                      { tempProduct.imagesUrl ?.map((url, index) => (
                         <img 
                           key={ index }
                           src={ url}
                           alt="副圖"
-                          style={{height: "150px", objectFit: "cover"}}
+                          style={{ width: "150px",height: "150px", objectFit: "cover" }}
                         />
-                      })}
+                      ))}
                     </div>
                   </div>
                 </div>
