@@ -167,7 +167,7 @@ function AppLv3 () {
                   { products && products.length > 0 ? (
                     products.map( product => (
                       <tr key={product.id}>
-                        <td>{ product.title }</td>
+                        <td className="text-start">{ product.title }</td>
                         <td>{ product.origin_price }</td>
                         <td>{ product.price }</td>
                         <td>{ product.is_enable ? "啟用" : "未啟用" }</td>
